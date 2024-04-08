@@ -1,0 +1,52 @@
+@import '../variable';
+@import '../mixin';
+
+.about-us{
+    @include widthHeight(100%, 1254px);
+}
+
+.title{
+    padding-top: 58px;
+    display: flex;
+    color:black;
+    font-size: 50px;
+    font-weight: 300; 
+    margin-bottom: 68px;
+    P {
+        padding: 0px;
+        &:first-child{
+            color:#DF803E;
+            font-size: 26px;
+            font-weight: 600;
+            margin-right: 306px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.about-us__info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .about-us__item{
+        width: 408px;
+        height: 409px;
+        margin-right: 82px;
+        margin-bottom: 44px;
+        display: flex;
+        flex-direction: column;
+        @include centered;
+        border: $border;
+        border-radius: 20px;
+        img {
+            @include widthHeight(206px, 206px);
+        }
+        p{
+            width: 360px;
+            font-size: 34px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 15px;
+        }
+    }
+}

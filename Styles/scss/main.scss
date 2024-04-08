@@ -1,0 +1,51 @@
+@import './blocks/header';
+@import './variable';
+@import './blocks/about';
+@import './blocks/direction';
+@import './blocks/study';
+@import './blocks/travel';
+@import './blocks/team';
+@import './blocks/footer';
+@import './blocks/response';
+
+
+// @import '../mixin';
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 1920px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Bookman Old Style', serif;
+}
+.container{
+    width: 1780px;
+    padding-left: 120px;
+    padding-top: 54px;
+    position: relative;
+}
+.btn {
+    width: 404px;
+    height: 71px;
+    padding: 20px 42px 20px 42px;
+    font-size: 26px;
+    font-weight: 300;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+}
+

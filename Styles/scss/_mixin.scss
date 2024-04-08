@@ -1,0 +1,14 @@
+@mixin displeyFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin centered{
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin widthHeight($width, $height){
+    width: $width;
+    height: $height;
+}

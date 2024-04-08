@@ -1,0 +1,72 @@
+@import '../variable';
+@import '../mixin';
+
+.direction{
+    background-color:$colorBg;
+    opacity: 0.9;
+    @include widthHeight(100%, 1300px);
+    .container {
+        .title{
+            P {
+                &:first-child{
+                    color:white;
+                    margin-right: 224.5px;
+                    margin-bottom: 64px;
+                }
+            }
+        }
+    }
+}
+.direction__list{
+    display: flex;
+    img{
+        margin-top: 200px;
+        width: 418px;
+        height: 590px;
+    }
+}
+
+.rounded {
+    list-style-type: none; 
+    counter-reset: li; 
+    list-style: none; 
+    font-size: 34px;
+    font-weight: 300;
+    }
+    .rounded li {
+        width: 824px;
+        height: 102px;
+        position: relative;
+        background: transparent;
+        border-top: $border;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        &:before {
+            content: '0' counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            background: transparent;
+            height: 66px;
+            width: 66px;
+            line-height: 66px;
+            border: $border;
+            text-align: center;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        &:last-child{
+            border-bottom: $border;
+        }
+        p {
+            margin-left: 105px;
+            margin-bottom: 20px;
+        }
+    }
+.title__btn {
+    margin-left: 684px;
+    margin-top: 64px;
+}
+    

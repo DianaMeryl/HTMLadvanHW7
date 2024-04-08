@@ -1,0 +1,75 @@
+@import '../variable';
+@import '../mixin';
+
+.travel{
+    @include widthHeight(100%, 1629px);
+    .container {
+        .title--black{
+            P:first-child{
+                color:black;
+            }
+        }
+        .london{
+            font-size: 34px;
+            font-weight: 300;
+            line-height: 130%;
+        }
+    }
+}
+.travel__gallery{
+    padding: 0px;
+    @include widthHeight(100%, 1020px);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    grid-template-areas: 
+    "img1 img1 img1 img2 img2 img2 img2 img2 img3 img3 img3 img3"
+     "img1 img1 img1 img2 img2 img2 img2 img2 img3 img3 img3 img3"
+     "img1 img1 img1 img2 img2 img2 img2 img2 img3 img3 img3 img3"
+     "img1 img1 img1 img2 img2 img2 img2 img2 img3 img3 img3 img3"
+     "img1 img1 img1 img2 img2 img2 img2 img2 img3 img3 img3 img3"
+
+    "img1 img1 img1 img5 img5 img5 img5 img6 img6 img6 img6 img6"
+
+    "img4 img4 img4 img5 img5 img5 img5 img6 img6 img6 img6 img6"
+    "img4 img4 img4 img5 img5 img5 img5 img6 img6 img6 img6 img6"
+    "img4 img4 img4 img5 img5 img5 img5 img6 img6 img6 img6 img6"
+    "img4 img4 img4 img5 img5 img5 img5 img6 img6 img6 img6 img6"
+
+    "img4 img4 img4 img5 img5 img5 img5 img7 img7 img8 img8 img8"
+
+    "img4 img4 img4 img5 img5 img5 img5 img7 img7 img8 img8 img8"
+    ;
+    div img{
+        @include widthHeight(100%, 100%);
+        object-fit: cover;
+    }
+}
+.img1{
+grid-area: img1;
+}
+.img2{
+grid-area: img2;
+}
+.img3{
+grid-area: img3;
+}
+.img4{
+grid-area: img4;
+}
+.img5{
+grid-area: img5;
+}
+.img6{
+grid-area: img6;
+}
+.img7{
+grid-area: img7;
+}
+.img8{
+    grid-area: img8;
+}
+.london{
+    margin-bottom: 48px;
+}

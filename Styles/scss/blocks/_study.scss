@@ -1,0 +1,105 @@
+@import '../variable';
+@import '../mixin';
+
+.study{
+    @include widthHeight(100%, 1287px);
+    .container {
+        .title--direct{
+            flex-direction: column;
+        }
+    }
+}
+.study__img{
+    @include widthHeight(956px, 505px);
+    position: absolute;
+    top: 240px;
+    right: 0px;
+}
+.title--direct {
+    P {
+        &:first-child{
+        color:black;
+        margin-right: 224.5px;
+        margin-bottom: 72px;
+        }
+    } 
+}
+.title--format{
+    margin-top: 64px;
+    P {
+        &:first-child{
+        font-size: 50px;
+        font-weight: 300;
+        margin-top: 64px;
+        margin-left: 632px;
+        color: rgb(0, 0, 0);
+        }
+    }
+}
+
+.study__types {
+    list-style-type: none; 
+    counter-reset: li; 
+    display: flex;
+    flex-direction:column;
+    margin-top: 75px;
+    p{
+        color:black;
+        font-size: 34px;
+        font-weight: 300;
+        margin-bottom: 51px;
+        position: relative;
+        padding-left: 86px;
+        &:before {
+            content: '0' counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            background: transparent;
+            @include widthHeight(66px, 66px);
+            line-height: 66px;
+            border: $border;
+            text-align: center;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+.study__format{
+    width: 100%;
+    @include displeyFlex;
+    div{
+        @include widthHeight(530px, 229px);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        list-style-type: none; 
+        counter-reset: li; 
+        p{
+        font-size: 26px;
+        font-weight: 300;
+        text-align: left;
+        position: relative;
+        padding-left: 86px;
+            &:first-child {
+                font-size: 34px;
+                margin-bottom: 19px;
+                &:before {
+                    content: '0' counter(li);
+                    counter-increment: li;
+                    position: absolute;
+                    left: 5px;
+                    top: 50%;
+                    background: transparent;
+                    @include widthHeight(66px, 66px);
+                    line-height: 66px;
+                    border: $border;
+                    text-align: center;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

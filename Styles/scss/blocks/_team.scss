@@ -1,0 +1,60 @@
+@import '../variable';
+@import '../mixin';
+
+.team{
+    @include widthHeight(100%, 1285px);
+    background-color:$colorBg;
+    .container {
+        .title--black{
+            p:first-child{
+                color:white;
+                margin-right: 87px;
+            }
+        }
+    }
+}
+.info{
+    @include displeyFlex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 32px;
+    font-weight: 300;
+    text-align: center;
+}
+.info__member {
+    @include widthHeight(400px, 690px);
+    background-color: white;
+    border-radius: 14px; 
+}
+.info__member-name {
+    font-size: 30px;
+    margin-top: 3px;
+    margin-bottom: 18px;
+}
+.info__member-position{
+    font-size: 22px;
+}
+.info__member-name--bigger{
+    font-size: 34px;
+}
+.info__member-position--bigger{
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+.info__member img{
+    @include widthHeight(100%, 509px);
+    object-fit: cover;
+    border-radius: 14px;
+}
+.info__member--central{
+    @include widthHeight(476px, 928px);
+    img{    
+        @include widthHeight(100%, 606px);
+    }
+    p:nth-child(1){
+        font-size: 34px;
+    }
+}
+
+
